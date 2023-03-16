@@ -1,0 +1,6 @@
+/* btn 클래스 만들기 */
+/*create-react-app은 이 CSS 코드를 js 오브젝트로 변환시켜주게 된다. */
+.btn {
+    color:rgb(255, 255, 255);
+    background-color: rgb(21, 102, 75);
+}
