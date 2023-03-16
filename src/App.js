@@ -1,9 +1,10 @@
 import Button from "./Button"; // import 해주면 Button 을 아래에서 사용할 수 있는 상태가 된다.
+import styles from "./App.module.css";
 
 function App() {
   return (
     <div>
-      <h1>Welcome back!!!!</h1>
+      <h1 className={styles.title}>Welcome back!!!!</h1>
       <Button text={"Continue"} />
     </div>
   );
