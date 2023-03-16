@@ -5,8 +5,6 @@ function App() {
   const [keyword, setKeyword] = useState("");
   const onClick = () => setValue((prev) => prev + 1);
   const onChange = (event) => setKeyword(event.target.value);
-  console.log("저는 항상 실행됩니다!");
-
   useEffect(() => {
     console.log("저는 한번만 실행됩니다.");
   }, []);
@@ -18,6 +16,11 @@ function App() {
   useEffect(() => {
     console.log("저는 카운터가 변화할 때만 실행됩니다.");
 }, [counter]); 
+
+
+useEffect(() => {
+  console.log("저는 카운터 또는 키워드가 변화할 때만 실행됩니다.");
+}, [counter, keyword]); 
 
   return (
     <div>
