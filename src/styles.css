@@ -1,0 +1,8 @@
+button {
+    color:white;
+    background-color: tomato;
+}
+
+button:hover{
+    background-color: blue;
+}
