@@ -7,18 +7,17 @@ function App() {
   const onChange = (event) => setKeyword(event.target.value);
   console.log("저는 항상 실행됩니다!");
 
-  // useEffect 사용하기 - API 처럼 딱 한번만 호출하고 다시는 호출하지 않을 경우 사용
   useEffect(() => {
     console.log("저는 한번만 실행됩니다.");
-  }, []); // 빈배열 - 리액트가 더이상 지켜볼 것이 없기 때문에 처음 한번만 실행됨.
-
-  // 이 코드는 keyword가 변화할 때만 실행된다.
-  // if문을 사용하여 keyword가 뭐 하나라도 적힐때 && 5초과일 경우 console.log 되도록 조건을 준다.
+  }, []);
+  
   useEffect(() => {
-    if (keyword !== "" && keyword.length > 5) {
-      console.log("찾는 영화는", keyword);
-    }
-  }, [keyword]); // 배열 안 keyword 를 넣어줌 - keyword가 바뀔때만 실행됨.
+      console.log("저는 키워드가 변화할 때만 실행됩니다.");
+  }, [keyword]); 
+
+  useEffect(() => {
+    console.log("저는 카운터가 변화할 때만 실행됩니다.");
+}, [counter]); 
 
   return (
     <div>
