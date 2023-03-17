@@ -1,7 +1,24 @@
 import { useState, useEffect } from "react";
 
+// useEffect는 컴포넌트가 처음 생성될 때 실행된다
+// 이것으로 인해 컴포넌트가 언제 생성되었는지, 언제 사라졌는지 알 수 있게 됨.
+// 컴포넌트가 파괴될 대는 react.js가 hiFn이 리턴한 function 을 실행하게 된다.
 function Hello() {
+
+  function byFn(){
+    console.log("컴포넌트가 사라졌어요");
+  }
+
+
+  function hiFn() {
+    console.log("컴포넌트가 만들어졌어요!");
+    return byFn; // cleanup function
+  }
+
+  useEffect(hiFn, []);
+
   return <h1>안녕?</h1>;
+
 }
 
 function App() {
