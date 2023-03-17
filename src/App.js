@@ -30,9 +30,16 @@ function App() {
   console.log(toDos);
 
   return (
-    <div style={{alignItems:"center", display:"flex", flexDirection:"column", justifyContent:"center"}}>
-      <h4 style={{fontSize:"3rem"}}>오늘의 계획</h4>
-      <h7>오늘의 계획은 총 {toDos.length}개 입니다.</h7>
+    <div
+      style={{
+        alignItems: "center",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
+      <h4 style={{ fontSize: "3rem" }}>오늘의 계획</h4>
+      <h3>오늘의 계획은 총 {toDos.length}개 입니다.</h3>
       <form onSubmit={onSubmit}>
         <input
           onChange={onChange}
@@ -40,7 +47,7 @@ function App() {
           type="text"
           placeholder="오늘 해야할 일을 입력해주세요"
           style={{
-            marginTop:"1rem",
+            marginTop: "1rem",
             width: "20rem",
             height: "2rem",
           }}
@@ -55,8 +62,15 @@ function App() {
         >
           추가하기
         </button>
-        <h4 style={{fontSize : "1rem"}}>{toDos + " "}</h4>
       </form>
+      {/* map() 의 역할은 예전 array를 가져와서 새로운 배열로 변형해준다.
+      리턴하는게 어떤 값이던지 그 값이 새로운 배열이 된다.*/}
+      <ul>
+        {/* map함수는 첫번째는 value, 두번째는 index여야한다. 숫자를 입력해줄경우는 두번째 인자에 index를 넘겨줘야 함.*/}
+        {toDos.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
