@@ -14,8 +14,9 @@ function App() {
   }, []); // [] 적어주어 한번만 로딩되고 끝
 
   return (
-    <div style={{ fontFamily: "'Gowun Dodum', sans-serif" }}>
-      <h1>The Coins! (총 {coins.length}개)</h1>
+    <div style={{fontFamily: "'Gowun Dodum', sans-serif",
+    color:"rgb(255,255,255)", backgroundColor:"rgb(0,0,0)" }}>
+      <h1 style={{margin:"0"}}>The Coins! (총 {coins.length}개)</h1>
       {loading ? <strong>loading...</strong> : null}{" "}
       {/*로딩 중일때 loading...가 표시됨 아닐때는 문구가 사라짐*/}
       <ul>
