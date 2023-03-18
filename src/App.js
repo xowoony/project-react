@@ -21,7 +21,9 @@ function App() {
         backgroundColor: "rgb(0,0,0)",
       }}
     >
-      <h1 style={{ margin: "0" }}>The Coins! (총 {coins.length}개)</h1>
+      <h1 style={{ margin: "0" }}>
+        The Coins! {loading ? "" : `(총 ${coins.length}개)`}
+      </h1>
       {loading ? (
         <strong>loading...</strong>
       ) : (
