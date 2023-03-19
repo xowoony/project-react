@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./App.module.css";
+import { AiFillCaretRight } from "react-icons/ai";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,22 +52,23 @@ function App() {
       <table>
         <tbody>
           <tr>
-              <td>
-                <div>구매에 사용할 금액을 입력하세요</div>
-                <input
-                  type="number"
-                  value={pay}
-                  onChange={handleInput}
-                  placeholder="dollor"
-                />
-              </td>
-              <td colSpan={2}> ======> </td>
-              <td>
-                <div>구매할 수 있는 코인은 다음과 같습니다</div>
-                <div>{pay / cost}</div>
-              </td>
+            <td>
+              <div>구매에 사용할 금액을 입력하세요</div>
+              <input
+                type="number"
+                value={pay}
+                onChange={handleInput}
+                placeholder="dollor"
+              />
+            </td>
+            <td colSpan={2}>
+            <AiFillCaretRight />
+            </td>
+            <td>
+              <div>구매할 수 있는 코인은 다음과 같습니다</div>
+              <div>{pay / cost}</div>
+            </td>
           </tr>
-  
         </tbody>
       </table>
     </div>
