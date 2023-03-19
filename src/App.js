@@ -49,24 +49,28 @@ function App() {
           ))}
         </select>
       )}
-      <table>
+      <table className={styles.table}>
         <tbody>
           <tr>
             <td>
               <div>구매에 사용할 금액을 입력하세요</div>
               <input
+                className={styles.input}
                 type="number"
                 value={pay}
                 onChange={handleInput}
-                placeholder="dollor"
-              />
+                placeholder="달러 ($)"
+              />{" "}
+              $
             </td>
             <td colSpan={2}>
-            <AiFillCaretRight />
+              <div className={styles.width}>
+                <AiFillCaretRight />
+              </div>
             </td>
             <td>
-              <div>구매할 수 있는 코인은 다음과 같습니다</div>
-              <div>{pay / cost}</div>
+              <div>구매할 수 있는 코인은 다음과 같습니다.</div>
+              <div className={styles.center}>{pay / cost}</div>
             </td>
           </tr>
         </tbody>
