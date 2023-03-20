@@ -30,6 +30,7 @@ function App() {
         <div>
           {movies.map((movie) => (
             <Movie
+              key={movie.id}  // key는 React.js에서 map안 component들을 render 할 때 사용한다.
               coverImg={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
