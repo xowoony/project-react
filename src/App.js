@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/movie">
+        <Route path="/movie/:id"> {/*:id를 주고*/}
           <Detail />
         </Route>
         <Route path="/">

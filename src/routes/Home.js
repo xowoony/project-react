@@ -16,7 +16,7 @@ function Home() {
       setLoading(false);
     };
   
-    // useEffect를 이용하여 getMovies를 호출
+
     useEffect(() => {
       getMovies();
     }, []);
@@ -29,15 +29,13 @@ function Home() {
           <div>
             {movies.map((movie) => (
               <Movie
-                key={movie.id}  // key는 React.js에서 map안 component들을 render 할 때 사용한다.
+                key={movie.id}
+                id={movie.id} // id를 준다
                 coverImg={movie.medium_cover_image}
                 title={movie.title}
                 summary={movie.summary}
                 genres={movie.genres}
               />
-              // 원래 medium_cover_image 이지만 mediumCoverImage 로 이름을 바꾸거나 완전 다르게 바꿔 주어도 됨.
-              // 난 여기서 coverImg라고 사용하겠음.
-              // 여기서 바꿔줬으면 Movies.js에서도 바꾸어주어야 함.
             ))}
           </div>
         )}
