@@ -24,7 +24,7 @@ function Movie({ id, coverImg, title, summary, genres }) {
   );
 }
 
-// PropType 설정
+// PropType 설정6
 Movie.propTypes = {
   id:PropTypes.number.isRequired,
   coverImg: PropTypes.string.isRequired,
