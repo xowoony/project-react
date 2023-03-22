@@ -1,20 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import "../css/Movie.css";
+import styles from "../css/Movie.css";
 
-function Movie({ id, coverImg, title, summary, genres }) {
+function Movie({ id, coverImg, title }) {
   return (
-    <Link to={`/movie/${id}`} style={{ textDecoration: "none" }}>
-      <div className="movie">
-        <img src={coverImg} alt="cover" className="coverImg" />
-        <div className="infos">
-          <h2 className="title">{title}</h2>
-          <ul>{genres ? genres.map((g) => <li key={g}>{g}</li>) : null}</ul>
-          <span>{summary}</span>
-        </div>
+    <div className={styles.movieContainer}>
+      <div className={styles.movie}>
+        <Link to={`/movie/${id}`} className="link">
+          <img src={coverImg} alt="cover" className="coverImg" />
+          <div className="title">{title}</div>
+        </Link>
       </div>
-    </Link>
+      
+    </div>
   );
 }
 
@@ -24,6 +23,8 @@ Movie.propTypes = {
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  runtime: PropTypes.number.isRequired,
+  rating: PropTypes.number.isRequired,
 };
 
 export default Movie;

@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: black;
+  padding: 2.5rem;
+  grid-gap: 3rem;
+}
+
+.header {
+  color: #6900ff;
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: #251b34;
+  height: 3rem;
+}
+
+.header a {
+  color: #6900ff;
+  text-decoration: none;
+  text-decoration: none;
+  margin-left: 3rem;
+}
+
+.loading {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

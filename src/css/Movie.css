@@ -1,20 +1,28 @@
 
-.movie {
-    display: grid;
-    grid-template-columns: minmax(150px, 1fr) 2fr;
-    grid-gap: 20px;
-    background-color: rgba(226, 226, 226, 0);
-    margin-bottom: 5rem;
-    font-weight: 300;
-    padding: 20px;
-    border-radius: 5px;
-    color: #d6d6d6;
-    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-        0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+.movieContainer {
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
+.link{
+    
+    text-decoration: none;
+    color: white;
+    border-radius: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .coverImg {
   border-radius: 2rem;
-  width: 18rem;
+  width: 12rem;
   padding: 1rem;
+}
+
+.title{
+  width: 12rem;
 }

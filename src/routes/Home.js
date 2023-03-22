@@ -8,7 +8,7 @@ function Home() {
   const getMovies = async () => {
     const json = await (
       await fetch(
-        `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?minimum_rating=7&sort_by=year`
       )
     ).json();
     setMovies(json.data.movies);
@@ -18,11 +18,14 @@ function Home() {
     getMovies();
   }, []);
   return (
-    <div>
+    <div className="container">
+      <header className="header">
+        <a href="/">THORNFLIX</a>
+      </header>
       {loading ? (
-        <h1>Loading...</h1>
+        <h1 className="loading">Loading...</h1>
       ) : (
-        <div>
+        <div className="movie-container">
           {movies.map((movie) => (
             <Movie
               key={movie.id}
@@ -31,6 +34,8 @@ function Home() {
               title={movie.title}
               summary={movie.summary}
               genres={movie.genres}
+              runtime={movie.runtime}
+              rating={movie.rating}
             />
           ))}
         </div>
