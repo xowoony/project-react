@@ -1,5 +1,5 @@
 # PROJECT-REACT : Creating a Movie Web Site
-<h4>a project under development..</h4>
+<h4>:yellow_heart:  a project under development..  :yellow_heart:</h4>
 <h2>Technologies Used</h2>
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white"/>
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
