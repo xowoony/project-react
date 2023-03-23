@@ -6,7 +6,6 @@
 
 
 .link{
-    
     text-decoration: none;
     color: white;
     border-radius: 1rem;
@@ -22,6 +21,11 @@
   padding: 1rem;
 }
 
+.coverImg:hover{
+  filter: brightness(0.5);
+  transition-duration: 1s;
+}
+
 
 .title{
   width: 12rem;
@@ -32,22 +36,3 @@
   justify-content: center;
 }
 
-
-/* .movieInfo {
-  width: 15rem;
-  height: 24rem;
-  border: 0.0625rem solid rgb(17 18 222 / 91%);
-  border-radius: 1rem;
-  background-color: rgb(67 67 67 / 40%);
-  position: absolute;
-  display: none;
-} */
-
-.link:hover{
-  width: 15rem;
-  height: 24rem;
-  border: 0.0625rem solid rgb(17 18 222 / 91%);
-  border-radius: 1rem;
-  background-color: rgb(67 67 67 / 40%);
-  position: absolute;
-}
