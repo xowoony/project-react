@@ -33,3 +33,10 @@ React Router
 Github Pages
 <br>
 <br>
+
+<h2>Distribution</h2>
+https://xowoony.github.io/project-react/
+
+
+
+
