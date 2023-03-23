@@ -1,13 +1,10 @@
 # PROJECT-REACT : Creating a Movie Web Site
-
+<br>
 <h2>Technologies Used</h2>
-React
-<br>
-CSS
-<br>
-NodeJS
-<br>
-<br>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=Node.js&logoColor=white"/>
+
 
 
 <h2>Implementation Function</h2>
