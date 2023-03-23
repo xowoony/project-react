@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../css/Detail.css";
-
+import MovieDetail from "../components/MovieDetail";
 
 function Detail() {
   const { id } = useParams();
@@ -29,14 +28,14 @@ function Detail() {
       {loading ? (
         <h1 className="loading">Loading...</h1>
       ) : (
-        <div>
-          <img src={movie.medium_cover_image}></img>
-          <h1>{movie.title}</h1>
-          <h3>{movie.summary}</h3>
-          <h3>{movie.genres}</h3>
-          <h3>{movie.runtime}</h3>
-          <h3>{movie.rating}</h3>
-        </div>
+        <MovieDetail
+          coverImg={movie.medium_cover_image}
+          year={movie.year}
+          rating={movie.rating}
+          title={movie.title}
+          summary={movie.description_full}
+          genres={movie.genres}
+        />
       )}
     </div>
   );
