@@ -12,7 +12,6 @@ function Movie({ id, coverImg, title }) {
           <div className="title">{title}</div>
         </Link>
       </div>
-      
     </div>
   );
 }

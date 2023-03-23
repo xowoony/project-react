@@ -11,10 +11,7 @@ function MovieDetail({
   coverImg,
   summary,
 }) {
-  let shortSummary = summary;
-  if (shortSummary.length > 800) {
-    shortSummary = shortSummary.substring(0, 800) + "...";
-  }
+
   return (
     <div>
       <div>
@@ -23,7 +20,7 @@ function MovieDetail({
       <div>
         <h1>{title}</h1>
         <h1>{year}</h1>
-        <h3>{summary}</h3>
+        <p>{summary.length > 235 ? `${summary.slice(0,235)}...` : summary}</p>
         <ul>{genres ? genres.map((g) => <li key={g}>{g}</li>) : null}</ul>
         <h3>{runtime}</h3>
         <h3>{rating}</h3>
