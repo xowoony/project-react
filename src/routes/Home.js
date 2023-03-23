@@ -6,6 +6,9 @@ import "../css/Home.css";
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+
+
+
   const getMovies = async () => {
     const json = await (
       await fetch(
@@ -15,9 +18,13 @@ function Home() {
     setMovies(json.data.movies);
     setLoading(false);
   };
+
+
   useEffect(() => {
     getMovies();
   }, []);
+
+
   return (
     <div className="container">
       <header className="header">
