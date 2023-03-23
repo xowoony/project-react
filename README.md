@@ -1,4 +1,4 @@
-# Project-React : Creating a Movie Web Site
+# PROJECT-REACT : Creating a Movie Web Site
 
 <h2>Technologies Used</h2>
 React
