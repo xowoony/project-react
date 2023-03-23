@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styles from "../css/Detail.css";
+import "../css/Detail.css";
+
 
 function Detail() {
   const { id } = useParams();
@@ -22,9 +23,11 @@ function Detail() {
 
   return (
     <div>
-      <header className="header">THORNFLIX</header>
+      <header className="header">
+        <a href="https://xowoony.github.io/project-react/">THORNFLIX</a>
+      </header>
       {loading ? (
-        <h1>로딩중...</h1>
+        <h1 className="loading">Loading...</h1>
       ) : (
         <div>
           <img src={movie.medium_cover_image}></img>

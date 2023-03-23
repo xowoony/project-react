@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import "../css/Home.css";
 
+
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
@@ -20,7 +21,7 @@ function Home() {
   return (
     <div className="container">
       <header className="header">
-        <a href="/">THORNFLIX</a>
+        <a href="https://xowoony.github.io/project-react/">THORNFLIX</a>
       </header>
       {loading ? (
         <h1 className="loading">Loading...</h1>
