@@ -7,6 +7,7 @@ function Movie({ id, coverImg, title }) {
   return (
     <div className="movieContainer">
       <div className="movie">
+      <div className="movieInfo"></div>
         <Link to={`/movie/${id}`} className="link">
           <img src={coverImg} alt="cover" className="coverImg" />
           <div className="title">{title}</div>
