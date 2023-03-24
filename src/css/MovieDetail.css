@@ -14,6 +14,19 @@
   position: fixed;
 }
 
+.year_data{
+margin-left: 7rem;
+}
+
+.rating_icon{
+    color: #c6ae46;
+}
+
+.rating_data{
+    font-size: 1.2rem;
+    margin-left: 0.3rem;
+}
+
 .info_title{
     align-items: center;
     display: flex;

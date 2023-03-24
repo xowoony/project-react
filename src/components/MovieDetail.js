@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../css/MovieDetail.css";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function MovieDetail({
   year,
@@ -23,18 +25,39 @@ function MovieDetail({
             <img src={coverImg} alt="coverImg" className="info_img"></img>
           </div>
           <div className="info_container">
+            {/* 영화제목 */}
             <div className="info_title">
               <h2>{title}</h2>
             </div>
-              <div>({year})</div>
-              <h3>{rating}</h3>
+
+            {/* 개봉연도 & 별점 정보*/}
+            <div className="year_rating">
+              <span>
+                <FontAwesomeIcon className="rating_icon" icon={faStar} />
+              </span>
+              <span className="rating_data">{rating}/10</span>
+              <span className="year_data">{year}</span>
+            </div>
+
+            {/* 별점정보 */}
+
+            {/* 시놉 */}
             <div className="info_summary">
               <p>
                 {summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}
               </p>
             </div>
-            <ul className="genres_container">{genres ? genres.map((g) => <li className="genres" key={g}>{g}</li>) : null}</ul>
-            
+
+            {/* 장르 */}
+            <ul className="genres_container">
+              {genres
+                ? genres.map((g) => (
+                    <li className="genres" key={g}>
+                      {g}
+                    </li>
+                  ))
+                : null}
+            </ul>
           </div>
         </div>
       </div>
