@@ -1,11 +1,9 @@
 .movieContainer {
   flex-direction: row;
   justify-content: center;
-
 }
 
-
-.link{
+.link {
   text-decoration: none;
   color: white;
   border-radius: 1rem;
@@ -16,22 +14,21 @@
 }
 
 .coverImg {
-border-radius: 2rem;
-width: 12rem;
-padding: 1rem;
+  border-radius: 2rem;
+  width: 12rem;
+  padding: 1rem;
 }
 
-.coverImg:hover{
-filter: brightness(0.5);
-transition-duration: 1s;
+.coverImg:hover {
+  filter: brightness(0.5);
+  transition-duration: 1s;
 }
 
-
-.title{
-width: 12rem;
-height: 5rem;
-align-items: center;
-display: flex;
-flex-direction: row;
-justify-content: center;
+.title {
+  width: 12rem;
+  height: 5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

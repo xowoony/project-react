@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieDetail from "../components/MovieDetail";
+import "../css/MovieDetail.css"
+
 
 function Detail() {
   const { id } = useParams();
@@ -21,9 +23,15 @@ function Detail() {
   }, []);
 
   return (
+
+
+
+
     <div>
       <header className="header">
-        <a href="https://xowoony.github.io/project-react/">THORNFLIX</a>
+        <div className="header-container">
+          <a href="https://xowoony.github.io/project-react/">THORNFLIX</a>
+        </div>
       </header>
       {loading ? (
         <h1 className="loading">Loading...</h1>
@@ -35,9 +43,15 @@ function Detail() {
           title={movie.title}
           summary={movie.description_full}
           genres={movie.genres}
+          fullImg={movie.large_cover_image}
         />
       )}
     </div>
+
+
+
+
+
   );
 }
 export default Detail;

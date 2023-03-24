@@ -23,7 +23,6 @@ Movie.propTypes = {
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
-  runtime: PropTypes.number.isRequired,
   rating: PropTypes.number.isRequired,
 };
 

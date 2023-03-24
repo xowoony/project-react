@@ -7,13 +7,16 @@ function MovieDetail({
   rating,
   title,
   genres,
-  runtime,
   coverImg,
   summary,
+  fullImg,
 }) {
 
   return (
     <div>
+      <div>
+        <img src={fullImg} alt="fullImg" className="fullImg"></img>
+      </div>
       <div>
         <img src={coverImg} alt="coverImg"></img>
       </div>
@@ -22,7 +25,6 @@ function MovieDetail({
         <h1>{year}</h1>
         <p>{summary.length > 235 ? `${summary.slice(0,235)}...` : summary}</p>
         <ul>{genres ? genres.map((g) => <li key={g}>{g}</li>) : null}</ul>
-        <h3>{runtime}</h3>
         <h3>{rating}</h3>
       </div>
     </div>
@@ -35,7 +37,6 @@ MovieDetail.propTypes = {
   year: PropTypes.number.isRequired,
   summary: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string),
-  runtime: PropTypes.number.isRequired,
   rating: PropTypes.number.isRequired,
 };
 

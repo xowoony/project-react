@@ -2,12 +2,9 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import "../css/Home.css";
 
-
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
-
-
 
   const getMovies = async () => {
     const json = await (
@@ -19,16 +16,16 @@ function Home() {
     setLoading(false);
   };
 
-
   useEffect(() => {
     getMovies();
   }, []);
 
-
   return (
     <div className="container">
       <header className="header">
-        <a href="https://xowoony.github.io/project-react/">THORNFLIX</a>
+        <div className="header-container">
+          <a href="https://xowoony.github.io/project-react/">THORNFLIX</a>
+        </div>
       </header>
       {loading ? (
         <h1 className="loading">Loading...</h1>
