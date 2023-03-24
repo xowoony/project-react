@@ -20,13 +20,13 @@ body {
   background-color: #17172f94;
   font-size: 2rem;
   height: 5rem;
+  border-bottom: 0.0625rem solid rgb(255 255 255 / 79%);
 }
 
 .header a {
-  color: #dbdbd6;
-  text-decoration: none;
-  text-decoration: none;
+  color: #8442fb;
   margin-left: 3rem;
+  text-decoration: none;
 }
 
 .loading {
