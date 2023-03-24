@@ -11,21 +11,32 @@ function MovieDetail({
   summary,
   fullImg,
 }) {
-
   return (
-    <div>
-      <div>
-        <img src={fullImg} alt="fullImg" className="fullImg"></img>
-      </div>
-      <div>
-        <img src={coverImg} alt="coverImg"></img>
-      </div>
-      <div>
-        <h1>{title}</h1>
-        <h1>{year}</h1>
-        <p>{summary.length > 235 ? `${summary.slice(0,235)}...` : summary}</p>
-        <ul>{genres ? genres.map((g) => <li key={g}>{g}</li>) : null}</ul>
-        <h3>{rating}</h3>
+    <div className="t_container">
+      <div className="md_container">
+        {/* 배경 이미지 */}
+        <div className="md">
+          <img src={fullImg} alt="fullImg" className="fullImg"></img>
+        </div>
+        <div className="box">
+          <div>
+            <img src={coverImg} alt="coverImg" className="info_img"></img>
+          </div>
+          <div className="info_container">
+            <div className="info_title">
+              <h2>{title}</h2>
+            </div>
+              <div>({year})</div>
+              <h3>{rating}</h3>
+            <div className="info_summary">
+              <p>
+                {summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}
+              </p>
+            </div>
+            <ul className="genres_container">{genres ? genres.map((g) => <li className="genres" key={g}>{g}</li>) : null}</ul>
+            
+          </div>
+        </div>
       </div>
     </div>
   );
