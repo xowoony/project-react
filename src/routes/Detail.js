@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import MovieDetail from "../components/MovieDetail";
+import Loading from "../components/Loading";
 
 function Detail() {
   const { id } = useParams();
@@ -26,17 +26,8 @@ function Detail() {
         <a href="https://xowoony.github.io/project-react/">THORNFLIX</a>
       </header>
       {loading ? (
-        <h1 className="loading">Loading...</h1>
-      ) : (
-        <MovieDetail
-          coverImg={movie.medium_cover_image}
-          year={movie.year}
-          rating={movie.rating}
-          title={movie.title}
-          summary={movie.description_full}
-          genres={movie.genres}
-        />
-      )}
+        <Loading />
+      ) : null}
     </div>
   );
 }
