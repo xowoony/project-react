@@ -31,9 +31,9 @@ function MovieDetail({
                 check_box_outline_blank
               </span>
             </div>
-            <div className="top_icon hoverx">
+            <a href="https://xowoony.github.io/project-react/" className="top_icon hoverx">
               <span class="material-symbols-outlined font">close</span>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -55,8 +55,6 @@ function MovieDetail({
               <span className="rating_data">{rating}/10</span>
               <span className="year_data">{year}</span>
             </div>
-
-            {/* 별점정보 */}
 
             {/* 시놉 */}
             <div className="info_summary">
