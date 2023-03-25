@@ -15,11 +15,28 @@ function MovieDetail({
 }) {
   return (
     <div className="t_container">
+      {/* 배경 이미지 */}
+      <div className="md">
+        <img src={fullImg} alt="fullImg" className="fullImg"></img>
+      </div>
       <div className="md_container">
-        {/* 배경 이미지 */}
-        <div className="md">
-          <img src={fullImg} alt="fullImg" className="fullImg"></img>
+        {/* 상단 표시줄 */}
+        <div className="top">
+          <div className="top_container">
+            <div className="top_icon hover">
+              <span class="material-symbols-outlined font">remove</span>
+            </div>
+            <div className="max_icon hover">
+              <span class="material-symbols-outlined max_font">
+                check_box_outline_blank
+              </span>
+            </div>
+            <div className="top_icon hoverx">
+              <span class="material-symbols-outlined font">close</span>
+            </div>
+          </div>
         </div>
+
         <div className="box">
           <div>
             <img src={coverImg} alt="coverImg" className="info_img"></img>
