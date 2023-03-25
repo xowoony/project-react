@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../css/MovieDetail.css";
+import { Link } from "react-router-dom";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -31,9 +32,9 @@ function MovieDetail({
                 check_box_outline_blank
               </span>
             </div>
-            <a href="https://xowoony.github.io/project-react/" className="top_icon hoverx">
-              <span class="material-symbols-outlined font">close</span>
-            </a>
+            <Link to={`/`} className="top_icon hoverx">
+            <span class="material-symbols-outlined font">close</span>
+            </Link>
           </div>
         </div>
 
