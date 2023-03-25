@@ -18,11 +18,16 @@ body {
 }
 
 .header {
-  background-color: #17172f94;
+  /* background-color: #17172f94;
   font-size: 2rem;
   height: 5rem;
   border-bottom: 0.0625rem solid rgb(235 53 53);
-  box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px blue;
+  box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px blue; */
+  background-color: rgba(23,23,47,.5803921568627451);
+  font-size: 2rem;
+  height: 5rem;
+  border-bottom: 0.0625rem solid #a8898947;
+  box-shadow: -5px -5px 30px 5px #683939ba, 5px 5px 30px 5px #0d1063bd;
 }
 
 .header a {
