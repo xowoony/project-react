@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Movie from "../components/Movie";
+import { Link } from "react-router-dom";
 import "../css/Home.css";
 
 function Home() {
@@ -24,7 +25,7 @@ function Home() {
     <div className="container">
       <header className="header">
         <div className="header-container">
-          <a href="https://xowoony.github.io/project-react/">THORNFLIX</a>
+          <Link to={`/`}>THORNFLIX</Link>
         </div>
       </header>
       {loading ? (
