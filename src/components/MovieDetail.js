@@ -25,15 +25,15 @@ function MovieDetail({
         <div className="top">
           <div className="top_container">
             <div className="top_icon hover">
-              <span class="material-symbols-outlined font">remove</span>
+              <span className="material-symbols-outlined font">remove</span>
             </div>
             <div className="max_icon hover">
-              <span class="material-symbols-outlined max_font">
+              <span className="material-symbols-outlined max_font">
                 check_box_outline_blank
               </span>
             </div>
             <Link to={`/`} className="top_icon hoverx">
-            <span class="material-symbols-outlined font">close</span>
+            <span className="material-symbols-outlined font">close</span>
             </Link>
           </div>
         </div>
